@@ -1,0 +1,42 @@
+{
+    "name": "scrolling-gestures",
+    "fullName": "Scrolling Gestures",
+    "id": "jid0-xXJ39NPeSBeN8zbjffQa2GIA7kQ",
+    "description": "Navigate your browser history with horizontal scrolling on your trackpad or mouse wheel, while still being able to scroll left and right.",
+    "author": "nandhp",
+    "license": "MPL 2.0",
+    "version": "0.9.0206",
+
+    "homepage": "https://github.com/nandhp/scrolling-gestures",
+    "icon": "icon.png",
+    "icon64": "icon64.png",
+    "dependencies": ["api-utils", "addon-kit"],
+
+    "permissions": {
+        "private-browsing": true
+    },
+
+    "preferences": [
+        {
+            "title": "Gesture Speed",
+            "type": "integer",
+            "description": "Maximum interval between wheel steps in milliseconds. (Higher number allows slower gestures)",
+            "value": 100,
+            "name": "gestureTimeout"
+        },
+        {
+            "title": "Gesture Length",
+            "type": "integer",
+            "description": "Length of the gesture in wheel steps.",
+            "value": 11,
+            "name": "gestureLength"
+        },
+        {
+            "title": "Wheel Inertia Timeout",
+            "type": "integer",
+            "description": "After detecting a gesture, do not repeat the action until this much time (in milliseconds) has passed since the last wheel step.",
+            "value": 100,
+            "name": "gestureUnlockTimeout"
+        }
+    ]
+}
