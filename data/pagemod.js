@@ -77,8 +77,13 @@ self.port.on("setStatus", function(direction, progress, resetTime) {
             clearTimeout(resetTimeout);
         resetTimeout = setTimeout(function() { resetStatus() }, resetTime);
         if ( !inserted )
-            try { doc.body.appendChild(item) }
-            catch (e) { /* Avoid spamming the error log */ }
+            try {
+                doc.body.appendChild(item);
+                inserted = true;
+            }
+            catch (e) {
+                /* Do not spam the error log if it doesn't work */
+            }
     }
     // Report scrolling position; scrolling of page elements (overflow:auto),
     // including pdf.js, can only be detected this way.
@@ -96,8 +101,9 @@ function resetStatus() {
     if ( resetTimeout )
         clearTimeout(resetTimeout);
     resetTimeout = undefined;
+    if ( item && item.parentNode )
+        item.parentNode.removeChild(item);
     inserted = false;
-    item.parentNode.removeChild(item);
     cleanObsolete();
 }
 self.port.on("hideStatus", function() { resetStatus() });
