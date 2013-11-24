@@ -5,7 +5,7 @@
     "description": "Navigate your browser history with horizontal scrolling on your trackpad or mouse wheel, while still being able to scroll left and right.",
     "author": "nandhp",
     "license": "MPL 2.0",
-    "version": "0.9.0206",
+    "version": "1.0.0214",
 
     "homepage": "https://github.com/nandhp/scrolling-gestures",
     "icon": "icon.png",
@@ -18,25 +18,41 @@
 
     "preferences": [
         {
-            "title": "Gesture Speed",
+            "title": "Gesture timeout",
             "type": "integer",
-            "description": "Maximum interval between wheel steps in milliseconds. (Higher number allows slower gestures)",
+            "description": "Maximum interval between scroll steps in milliseconds. (Higher number allows slower gestures.)",
             "value": 100,
             "name": "gestureTimeout"
         },
         {
-            "title": "Gesture Length",
+            "title": "Gesture length",
             "type": "integer",
-            "description": "Length of the gesture in wheel steps.",
+            "description": "Length of the gesture in scroll steps.",
             "value": 11,
             "name": "gestureLength"
         },
         {
-            "title": "Wheel Inertia Timeout",
+            "title": "Scroll inertia timeout",
             "type": "integer",
-            "description": "After detecting a gesture, do not repeat the action until this much time (in milliseconds) has passed since the last wheel step.",
+            "description": "After detecting a gesture, do not repeat the action until this much time (in milliseconds) has passed since the last scroll step.",
             "value": 100,
             "name": "gestureUnlockTimeout"
+        },
+        {
+            "title": "Show visual feedback",
+            "type": "bool",
+            "description": "Show gesture progress via a sliding overlay.",
+            "value": true,
+            "name": "gestureFeedback"
+        },
+        {
+            "title": "Reverse direction",
+            "type": "boolint",
+            "description": "Reverse the meaning of left and right scrolling.",
+            "on": "-1",
+            "off": "1",
+            "value": 1,
+            "name": "gestureReverse"
         }
     ]
 }
