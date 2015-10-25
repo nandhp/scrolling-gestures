@@ -10,12 +10,13 @@ icon64.png: icon.svg
 	rm -f icon64.png_
 
 test: all
-	cfx run
+	jpm run -b ~/opt/firefox/firefox
 dist: scrolling-gestures.xpi
 
 scrolling-gestures.xpi: all
 	perl update-buildnum.pl package.json
-	cfx xpi
+	jpm xpi
+	mv jid0-xXJ39NPeSBeN8zbjffQa2GIA7kQ@jetpack-*.xpi $@
 
 install: scrolling-gestures.xpi
 	firefox scrolling-gestures.xpi

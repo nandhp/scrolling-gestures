@@ -1,16 +1,16 @@
 {
     "name": "scrolling-gestures",
-    "fullName": "Scrolling Gestures",
-    "id": "jid0-xXJ39NPeSBeN8zbjffQa2GIA7kQ",
+    "title": "Scrolling Gestures",
+    "id": "jid0-xXJ39NPeSBeN8zbjffQa2GIA7kQ@jetpack",
     "description": "Navigate your browser history with horizontal scrolling on your trackpad or mouse wheel, while still being able to scroll left and right.",
     "author": "nandhp",
     "license": "MPL 2.0",
-    "version": "1.0.0214",
+    "version": "1.1.0219",
 
     "homepage": "https://github.com/nandhp/scrolling-gestures",
     "icon": "icon.png",
-    "icon64": "icon64.png",
     "dependencies": ["api-utils", "addon-kit"],
+    "main": "lib/main.js",
 
     "permissions": {
         "private-browsing": true

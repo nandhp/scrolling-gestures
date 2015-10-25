@@ -111,6 +111,10 @@ document.addEventListener('pagehide', function() { resetStatus() });
 
 function cleanObsolete() {
     try {
+        if ( !doc ) {
+            frame = findFrame(window);
+            doc = frame.document;
+        }
         var o = doc.getElementsByTagName(TAGNAME);
         for ( var i = 0; i < o.length; i++ ) {
             o[i].style.display = 'none';
