@@ -1,0 +1,9 @@
+*~
+*.pl
+*.xpi
+.git
+.gitignore
+.jpmignore
+README.md
+TODO
+/screenshot*
