@@ -5,7 +5,7 @@
     "description": "Navigate your browser history with horizontal scrolling on your trackpad or mouse wheel, while still being able to scroll left and right.",
     "author": "nandhp",
     "license": "MPL 2.0",
-    "version": "1.1.0223",
+    "version": "1.1.0224",
 
     "homepage": "https://github.com/nandhp/scrolling-gestures",
     "icon": "icon.png",
@@ -53,6 +53,15 @@
             "off": "1",
             "value": 1,
             "name": "gestureReverse"
+        },
+        {
+            "title": "Automatically close tabs",
+            "type": "boolint",
+            "description": "Close tabs automatically if going back and no history is available",
+            "on": "1",
+            "off": "-1",
+            "value": 1,
+            "name": "gestureCloseTabs"
         }
     ]
 }
